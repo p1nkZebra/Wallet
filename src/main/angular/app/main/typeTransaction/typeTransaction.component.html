@@ -1,0 +1,46 @@
+<div>Main work! Type of transactions are here</div>
+
+<div class="row">
+    <div class="col-lg-6">
+
+    </div>
+
+    <div class="col-lg-6">
+        <clr-datagrid [(clrDgSelected)]="selectedTypeTransactions">
+            <!--<clr-dg-action-bar>-->
+            <!--<div class="btn-group">-->s
+            <!--<button *ngIf="selectedResources.length == 0"-->
+            <!--type="button"-->
+            <!--class="btn btn-sm btn-secondary"-->
+            <!--(click)="onAdd()">-->
+            <!--<clr-icon shape="plus"></clr-icon>-->
+            <!--Add-->
+            <!--</button>-->
+
+            <!--<button *ngIf="selectedResources.length > 0"-->
+            <!--type="button"-->
+            <!--class="btn btn-sm btn-secondary"-->
+            <!--(click)="onDelete()">-->
+            <!--<clr-icon shape="close"></clr-icon>-->
+            <!--Delete-->
+            <!--</button>-->
+            <!--<button *ngIf="selectedResources.length == 1"-->
+            <!--type="button"-->
+            <!--class="btn btn-sm btn-secondary"-->
+            <!--(click)="doEdit()">-->
+            <!--<clr-icon shape="close"></clr-icon>-->
+            <!--Edit-->
+            <!--</button>-->
+            <!--</div>-->
+            <!--</clr-dg-action-bar>-->
+
+            <clr-dg-column>Name</clr-dg-column>
+
+            <clr-dg-row *clrDgItems="let typeTransaction of allTypeTransactions" [clrDgItem]="typeTransaction">
+                <clr-dg-cell>{{typeTransaction.name}}</clr-dg-cell>
+            </clr-dg-row>
+
+            <clr-dg-footer>{{allTypeTransactions.length}} transactions</clr-dg-footer>
+        </clr-datagrid>
+    </div>
+</div>
